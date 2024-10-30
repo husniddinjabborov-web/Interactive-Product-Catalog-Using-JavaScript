@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  color: #333;
+  background-color: white;
+}
+
+.savatchaDown {
+  width: 550px;
+}
+@media (max-width: 992px) {
+  .savatchaDown {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 1rem 0;
+}
+.rating .stars {
+  cursor: pointer;
+}
+
+.discount-price {
+  text-decoration: line-through;
+  color: black;
+}
+
+.like-button {
+  cursor: pointer;
+  color: #ff6b6b;
+  font-size: 1.2rem;
+  position: relative;
+  transition: color 0.3s;
+}
+.like-button .like-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #e63946;
+  color: black;
+  border-radius: 50%;
+  padding: 0 5px;
+  font-size: 0.8rem;
+}
+
+.size-badge,
+.color-badge {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-right: 5px;
+  background-color: white;
+  color: black;
+}
+
+.selected-size,
+.selected-color {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  margin-right: 5px;
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  border: 1px solid #ddd;
+}
+
+.card-body > :last-child a {
+  width: 100%;
+}
+.card-body > :last-child span {
+  margin-left: 5px;
+}/*# sourceMappingURL=style.css.map */

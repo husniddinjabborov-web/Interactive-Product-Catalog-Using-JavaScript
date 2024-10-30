@@ -1,0 +1,54 @@
+// Component uslublari, har bir komponentning o‘z qismi bor
+
+.discount-price {
+    text-decoration: line-through;
+    color: $discount-price-color;
+  }
+  
+  .like-button {
+    cursor: pointer;
+    color: $like-color;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s;
+  
+    .like-count {
+      position: absolute;
+      top: -$spacing-small;
+      right: -$spacing-medium;
+      background-color: $background-color;
+      color: contrast-color($background-color);
+      border-radius: 50%;
+      padding: 0 $spacing-small;
+      font-size: $font-size-small;
+    }
+  }
+  
+  .size-badge,
+  .color-badge {
+    @include badge-style();
+  }
+  
+  .selected-size,
+  .selected-color {
+    @include badge-style($primary-color, white);
+    border-color: $primary-color;
+    border: 1px solid #ddd;
+  }
+  
+  .card-body {
+    > :last-child {
+      a {
+        width: 100%;
+      }
+  
+      span {
+        margin-left: $spacing-small;
+      }
+    }
+  }
+
+  // 
+  // 
+
+  

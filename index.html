@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahsulot Kartasi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./scss/style.css">
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Online Do'kon</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a  class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-cart"></i> Savatcha
+                            <span id="cartCount" class="badge bg-danger">0</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li class="dropdown-item-text savatchaDown">Savatcha bo'sh</li>
+                          </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="container my-5">
+        <h1 class="p-3 text-center">Maxsulotlarimiz</h1>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img id="productImage1" src="https://picsum.photos/300/200?random=1" class="card-img-top"
+                        alt="Mahsulot nomi" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title">Mahsulot nomi 1</h5>
+                        <p class="text-muted">Qisqacha tavsif: Ushbu mahsulot sifatli va uzoq muddat xizmat qiladi.</p>
+                        <p>
+                            <span class="discount-price">$120.00</span>
+                            <span class="fw-bold text-danger">$99.99</span>
+                        </p>
+                        <div class="rating">
+                            <p><strong>Reyting:</strong></p>
+                            <div class="stars">
+                                <span class="star" data-value="1" onclick="updateRating(this, 1)">☆</span>
+                                <span class="star" data-value="2" onclick="updateRating(this, 2)">☆</span>
+                                <span class="star" data-value="3" onclick="updateRating(this, 3)">☆</span>
+                                <span class="star" data-value="4" onclick="updateRating(this, 4)">☆</span>
+                                <span class="star" data-value="5" onclick="updateRating(this, 5)">☆</span>
+                            </div>
+                        </div>
+                        <p><strong>Rang:</strong>
+                            <span class="color-badge selected-color"
+                                onclick="selectColor(this, 'https://picsum.photos/300/200?random=1', 'productImage1')">Qora</span>
+                            <span class="color-badge"
+                                onclick="selectColor(this, 'https://picsum.photos/300/200?random=2', 'productImage1')">Oq</span>
+                            <span class="color-badge"
+                                onclick="selectColor(this, 'https://picsum.photos/300/200?random=3', 'productImage1')">Ko'k</span>
+                        </p>
+                        <p><strong>O'lcham:</strong>
+                            <span class="size-badge selected-size"
+                                onclick="selectSize(this, 'https://picsum.photos/300/200?random=4', 'productImage1')">S</span>
+                            <span class="size-badge"
+                                onclick="selectSize(this, 'https://picsum.photos/300/200?random=5', 'productImage1')">M</span>
+                            <span class="size-badge"
+                                onclick="selectSize(this, 'https://picsum.photos/300/200?random=6', 'productImage1')">L</span>
+                        </p>
+                        <div class="d-flex mb-3">
+                            <a href="javascript:void(0)" class="btn btn-primary"
+                                onclick="toggleCart(this)">Savatchaga
+                                qo'shish</a>
+                            <span class="like-button btn btn-primary"
+                                onclick="addLike(this)">&#x2764;</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="small text-muted">Kafolat: 1 yil</p>
+                        <p class="small text-muted">Qaytarish: 30 kun ichida qaytarish mumkin.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img id="productImage2" src="https://picsum.photos/300/200?random=7" class="card-img-top"
+                        alt="Mahsulot nomi" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title">Mahsulot nomi 2</h5>
+                        <p class="text-muted">Qisqacha tavsif: Ushbu mahsulot sifatli va uzoq muddat xizmat qiladi.</p>
+                        <p>
+                            <span class="discount-price">$120.00</span>
+                            <span class="fw-bold text-danger">$99.99</span>
+                        </p>
+                        <div class="rating">
+                            <p><strong>Reyting:</strong></p>
+                            <div class="stars">
+                                <span class="star" data-value="1" onclick="updateRating(this, 1)">☆</span>
+                                <span class="star" data-value="2" onclick="updateRating(this, 2)">☆</span>
+                                <span class="star" data-value="3" onclick="updateRating(this, 3)">☆</span>
+                                <span class="star" data-value="4" onclick="updateRating(this, 4)">☆</span>
+                                <span class="star" data-value="5" onclick="updateRating(this, 5)">☆</span>
+                            </div>
+                        </div>
+                        <p><strong>Rang:</strong>
+                            <span class="color-badge selected-color"
+                                onclick="selectColor(this, 'https://picsum.photos/300/200?random=7', 'productImage2')">Qora</span>
+                            <span class="color-badge"
+                                onclick="selectColor(this, 'https://picsum.photos/300/200?random=8', 'productImage2')">Oq</span>
+                            <span class="color-badge"
+                                onclick="selectColor(this, 'https://picsum.photos/300/200?random=9', 'productImage2')">Ko'k</span>
+                        </p>
+                        <p><strong>O'lcham:</strong>
+                            <span class="size-badge selected-size"
+                                onclick="selectSize(this, 'https://picsum.photos/300/200?random=10', 'productImage2')">S</span>
+                            <span class="size-badge"
+                                onclick="selectSize(this, 'https://picsum.photos/300/200?random=11', 'productImage2')">M</span>
+                            <span class="size-badge"
+                                onclick="selectSize(this, 'https://picsum.photos/300/200?random=12', 'productImage2')">L</span>
+                        </p>
+                        <div class="d-flex mb-3">
+                            <a href="javascript:void(0)" class="btn btn-primary"
+                                onclick="toggleCart(this)">Savatchaga
+                                qo'shish</a>
+                            <span class="like-button btn btn-primary"
+                                onclick="addLike(this)">&#x2764;</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="small text-muted">Kafolat: 1 yil</p>
+                        <p class="small text-muted">Qaytarish: 30 kun ichida qaytarish mumkin.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img id="productImage3" src="https://picsum.photos/300/200?random=13" class="card-img-top"
+                        alt="Mahsulot nomi" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title">Mahsulot nomi 3</h5>
+                        <p class="text-muted">Qisqacha tavsif: Ushbu mahsulot sifatli va uzoq muddat xizmat qiladi.</p>
+                        <p>
+                            <span class="discount-price">$120.00</span>
+                            <span class="fw-bold text-danger">$99.99</span>
+                        </p>
+                        <div class="rating">
+                            <p><strong>Reyting:</strong></p>
+                            <div class="stars">
+                                <span class="star" data-value="1" onclick="updateRating(this, 1)">☆</span>
+                                <span class="star" data-value="2" onclick="updateRating(this, 2)">☆</span>
+                                <span class="star" data-value="3" onclick="updateRating(this, 3)">☆</span>
+                                <span class="star" data-value="4" onclick="updateRating(this, 4)">☆</span>
+                                <span class="star" data-value="5" onclick="updateRating(this, 5)">☆</span>
+                            </div>
+                        </div>
+                        <p><strong>Rang:</strong>
+                            <span class="color-badge selected-color"
+                                onclick="selectColor(this, 'https://picsum.photos/300/200?random=13', 'productImage3')">Qora</span>
+                            <span class="color-badge"
+                                onclick="selectColor(this, 'https://picsum.photos/300/200?random=14', 'productImage3')">Oq</span>
+                            <span class="color-badge"
+                                onclick="selectColor(this, 'https://picsum.photos/300/200?random=15', 'productImage3')">Ko'k</span>
+                        </p>
+                        <p><strong>O'lcham:</strong>
+                            <span class="size-badge selected-size"
+                                onclick="selectSize(this, 'https://picsum.photos/300/200?random=16', 'productImage3')">S</span>
+                            <span class="size-badge"
+                                onclick="selectSize(this, 'https://picsum.photos/300/200?random=17', 'productImage3')">M</span>
+                            <span class="size-badge"
+                                onclick="selectSize(this, 'https://picsum.photos/300/200?random=18', 'productImage3')">L</span>
+                        </p>
+                        <div class="d-flex mb-3">
+                            <a href="javascript:void(0)" class="btn btn-primary"
+                                onclick="toggleCart(this)">Savatchaga
+                                qo'shish</a>
+                            <span class="like-button btn btn-primary"
+                                onclick="addLike(this)">&#x2764;</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="small text-muted">Kafolat: 1 yil</p>
+                        <p class="small text-muted">Qaytarish: 30 kun ichida qaytarish mumkin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

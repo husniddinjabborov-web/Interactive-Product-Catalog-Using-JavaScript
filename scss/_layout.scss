@@ -1,0 +1,15 @@
+// Layout uchun uslublar
+
+.savatchaDown {
+    @include responsive(width, 550px);
+  }
+  
+  .rating {
+    @include flex-container($spacing-medium);
+    margin: $spacing-large 0;
+  
+    .stars {
+      cursor: pointer;
+    }
+  }
+  

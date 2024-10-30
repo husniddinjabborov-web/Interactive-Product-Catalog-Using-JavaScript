@@ -1,0 +1,34 @@
+// Mixin va funksiyalarni saqlovchi fayl
+
+// Responsive mixin
+@mixin responsive($property, $value, $breakpoint: 992px) {
+    #{$property}: $value;
+  
+    @media (max-width: $breakpoint) {
+      #{$property}: fit-content;
+    }
+  }
+  
+  // Flex layout mixin
+  @mixin flex-container($gap: $spacing-medium, $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+  }
+  
+  // Contrast color function
+  @function contrast-color($color) {
+    @return if(lightness($color) > 50%, black, white);
+  }
+  
+  // Badge styling mixin
+  @mixin badge-style($bg-color: $secondary-color, $text-color: black) {
+    cursor: pointer;
+    padding: $spacing-small $spacing-medium;
+    border: 1px solid $bg-color;
+    border-radius: 5px;
+    margin-right: $spacing-small;
+    background-color: $bg-color;
+    color: $text-color;
+  }
+  
